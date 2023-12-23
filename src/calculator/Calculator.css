@@ -1,0 +1,14 @@
+/* Style-Sheet for calculator application */
+
+.anchorpane {
+	-fx-background-color: teal;
+}
+
+.label {
+	-fx-font-weight: bold;
+	-fx-text-fill: yellow;
+}
+
+.button {
+	-fx-font-size: 14;
+}
