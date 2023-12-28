@@ -16,6 +16,7 @@ public class MainCalculator extends Application {
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("Calculator.css").toExternalForm());
 			primaryStage.setScene(scene);
+			primaryStage.setTitle("Basic Calculator No. 0.0.1");
 			primaryStage.show();
 		} catch (Exception e) {
 			e.printStackTrace();
