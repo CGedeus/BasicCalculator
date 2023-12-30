@@ -13,6 +13,8 @@ import javafx.scene.layout.GridPane;
 
 public class BasicCalculatorController implements Initializable {
 
+	private Button integerButton;
+
 	private String n1 = new String();
 
 	private String n2 = new String();
@@ -30,13 +32,13 @@ public class BasicCalculatorController implements Initializable {
 	@FXML
 	private void integerActionEvent(ActionEvent event) {
 
-		Button button = (Button) event.getSource();
+		integerButton = (Button) event.getSource();
 		if (sign.isEmpty()) {
-			n1 += button.getText();
+			n1 += integerButton.getText();
 			numberProperty.set(n1);
 			textField.textProperty().bind(numberProperty);
 		} else if (!sign.isEmpty()) {
-			n2 += button.getText();
+			n2 += integerButton.getText();
 			numberProperty.set(n2);
 			textField.textProperty().bind(numberProperty);
 		} else {
@@ -57,8 +59,8 @@ public class BasicCalculatorController implements Initializable {
 		int result = 0;
 		int operand1 = Integer.parseInt(n1);
 		int operand2 = Integer.parseInt(n2);
-		n1 = new String();;
-		n2 = new String();;
+		n1 = new String();
+		n2 = new String();
 
 		switch (sign) {
 			case "+":
